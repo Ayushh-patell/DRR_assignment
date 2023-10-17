@@ -76,11 +76,11 @@ const Table = (props) => {
 
   const showList = (e) => {
     //show the excluded dates list (used primarily for smaller screens like mobile, which will not have hover functionality)
-    if (!(e.target.parentElement.style.rotate === "180deg")) {
-      e.target.parentElement.style.rotate = "180deg";
+    if (!(e.target.style.rotate === "180deg")) {
+      e.target.style.rotate = "180deg";
       document.querySelector(".excluded-array").style.display = "block";
     } else {
-      e.target.parentElement.style.rotate = "0deg";
+      e.target.style.rotate = "0deg";
       document.querySelector(".excluded-array").style.display = "none";
     }
   };
