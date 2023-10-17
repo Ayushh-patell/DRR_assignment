@@ -1,4 +1,4 @@
-This repository contains the backend code for your application.
+This repository contains the backend code for the application.
 
 ## Running the Backend Locally
 
