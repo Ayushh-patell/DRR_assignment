@@ -1,34 +1,15 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import Table from "./Table";
 
 function App() {
-  const [tableData, settableData] = useState();
-  const fetchData = async () => {  
-    try {
-      const response = await fetch("http://localhost:5000/");
-      
-      if (!response.ok) {
-        console.log('Error occured');
-      }
-      const data = await response.json();
-      console.log(data)
-      settableData(data)
-    } catch (error) {
-      console.error('Error fetching data:', error.message);
-    }
-  };
 
-useEffect(()=> {
-  console.log(tableData)
-  fetchData()
-},[])
   return (
     <div className="App">
       <div className="info">
         <h1 style={{fontSize:"1.4rem"}}>Made By Ayush Patel</h1>
+        <p>in this demo the functions work in the frontend, the code with backend, which is connected to a database, is on <span><a target="_blank" href="https://github.com/Ayushh-patell/DRR_assignment">Github</a></span></p>
       </div>
-      <Table tableData={tableData} settableData={settableData}  />
+      <Table/>
     </div>
   );
 }
